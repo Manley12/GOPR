@@ -87,24 +87,6 @@ classShell.prototype.comScreen = function( args ) {
     }
 };
 
-/*Start Menu"*/
-classShell.prototype.screenMainMenu = function() {
-    
-    var page0 = [
-        ' ',
-        '-------------------------'
-        "   MANLEY'S WEB TERMAL   ",
-        "          (v1.0)         ",
-        '0) OPTION 0',
-        '1) OPTION 1',
-        ' '
-        
-    ];
-    
-    OS.output.pushBuffer( page0 );
-    this.prompt();
-};
-        
 /*Option 6*/
 classShell.prototype.mopr = function() {
     OS.output.pushBuffer(['AN INTERESTING GAME.']);
@@ -143,6 +125,24 @@ classShell.prototype.gtnw = function() {
     this.prompt();
 };
 
+/*Start Menu"*/
+classShell.prototype.screenMainMenu = function() {
+    
+    var page0 = [
+        ' ',
+        '-------------------------'
+        "   MANLEY'S WEB TERMAL   ",
+        "          (v1.0)         ",
+        '0) OPTION 0',
+        '1) OPTION 1',
+        ' '
+        
+    ];
+    
+    OS.output.pushBuffer( page0 );
+    this.prompt();
+};
+
 classShell.prototype.comHelp = function() {
     
     var page1 = [
@@ -165,6 +165,14 @@ classShell.prototype.comContact = function() {
         ' ',
         ' '
     ]);
+    this.prompt();
+};
+
+classShell.prototype.comResume = function() {
+    OS.output.pushBuffer([ '...Loading CV...' ]);
+    var l = Math.max(0,parseInt($(window).width()/2-300));
+    var t = Math.max(0,parseInt($(window).height()/2-400));
+    window.open('http://ryanroper.com/rmroper.pdf','_blank','width=600,height=800,left='+l+',top:'+t);
     this.prompt();
 };
 
