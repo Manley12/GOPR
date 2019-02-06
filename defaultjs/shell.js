@@ -1,38 +1,56 @@
 var classShell = function() {
-    
-    this.prompt = ']';
-    
-    this.start - function() {
+
+    this.PROMPT = ']';
+
+    this.start = function() {
         this.screenMainMenu();
     };
-    
+
     this.prompt = function() {
         OS.output.pushBuffer(this.PROMPT);
         OS.input.lineListeners.push( this.processMainMenu.bind(this) );
     };
-    
+
     this.parsePatterns = [
         { pattern: /^\s*$/, parser: 'prompt' },
         { pattern: /^([0-9])$/, parser: 'comScreen' },
-        
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
-        
-        { pattern: /^ABOUT/i, parser: 'comAbout' },
-        
-        /*Global Thermonuclear War*/
-        { pattern: /^GLOBAL/i, parser: 'gtnw' },
-        { pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
-        { pattern: /^WAR/i, parser: 'gtnw' },
-        { pattern: /^GLOBAL WAR/i, parser: 'gtnw' },
-        { pattern: /^GLOBAL THERMONUCLEAR/i, parser: 'gtnw' },
-        { pattern: /^GLOBAL THERMONUCLEAR WAR/i, parser: 'gtnw' },
-       
+        {pattern: /^ADMIN/i, parser: 'admin' },
+        {pattern: /^TURTLE ADMIN/i, parser: 'comTurtleAdmin' },
+        {pattern: /^RAVEN ADMIN/i, parser: 'comRavenAdmin' },
+        {pattern: /^DISCORD/i, parser: 'comDiscord' },
+        {pattern: /^DISCORD CHANNEL/i, parser: 'comDiscord' },
+        {pattern: /^DISCORDCHANNEL/i, parser: 'comDiscord' },
+        {pattern: /^ABOUT/i, parser: 'comAbout' },
+        {pattern: /^TURTLE/i, parser: 'comTurtle'},
+        {pattern: /^RAVEN/i, parser: 'comRaven'},
+        {pattern: /^NODES/i, parser: 'comNodes' },
+        {pattern: /^NOTES/i, parser: 'comNanda' },
+        {pattern: /^NOTES AND/i, parser: 'comNanda' },
+        {pattern: /^NOTESAND/i, parser: 'comNanda' },
+        {pattern: /^NOTES AND ANNOUCEMENTS/i, parser: 'comNanda' },
+        {pattern: /^NOTESANDANNOUCEMENTS/i, parser: 'comNanda' },
+        {pattern: /^NOTES ANDANNOUCEMENTS/i, parser: 'comNanda' },
+        {pattern: /^NOTESAND ANNOUCEMENTS/i, parser: 'comNanda' },
+        {pattern: /^GLOBAL/i, parser: 'gtnw' },
+        {pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
+        {pattern: /^WAR/i, parser: 'gtnw' },
+        {pattern: /^GLOBAL WAR/i, parser: 'gtnw' },
+        {pattern: /^GLOBALWAR/i, paser: 'gtnw' },
+        {pattern: /^GLOBAL THERMONUCLEAR/i, parser: 'gtnw' },
+        {pattern: /^GLOBALTHERMONUCLEAR/i, parser: 'gtnw' },
+        {pattern: /^THERMONUCLEAR WAR/i, parser: 'gtnw' },
+        {pattern: /^THERMONUCLEARWAR/i, parser: 'gtnw' },
+        {pattern: /^GLOBAL THERMONUCLEAR WAR/i, parser: 'gtnw' },
+        {pattner: /^GLOBALTHERMONUCLEAR WAR/i, parser: 'gtnw' },
+        {pattern: /^GLOBAL THERMONUCLEARWAR/i, parser: 'gtnw' }
     ];
+
 };
 
 classShell.prototype.processMainMenu = function( stdin ) {
-    
+
     for (var i=0;i<this.parsePatterns.length;i++) {
         var matches = stdin.match(this.parsePatterns[i].pattern);
         if (matches) {
@@ -40,73 +58,51 @@ classShell.prototype.processMainMenu = function( stdin ) {
             return;
         }
     }
-    
-    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, OR A NUMBER (0-9). PLEASE TRY AGAIN.\N");
+
+    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
     this.prompt();
     return;
+
 };
 
+
 classShell.prototype.comScreen = function( args ) {
-    
+
     stdin = args[1];
-    
     switch (parseInt(stdin)) {
         case 0:
-            this.comHelp();
+            this.comDiscord();
             break;
         case 1:
-            this.comHelp();
+            this.comAbout();
             break;
         case 2:
-            this.comHelp();
+            this.comTurtle();
             break;
         case 3:
-            this.comHelp();
+            this.comRaven();
             break;
         case 4:
-            this.comHelp();
+            this.comNodes();
             break;
         case 5:
-            this.comHelp();
+            this.comNanda();
             break;
         case 6:
-            this.mopr();
+            this.wopr();
             break;
         case 7:
-            this.comHelp();
-            break;
-        case 8:
-            this.comHelp();
-            break;
-        case 9:
-            this.comHelp();
+            this.gtnw();
             break;
         default:
             OS.output.pushBuffer("FUNCTION NOT IMPLEMENTED\n");
             this.screenMainMenu();
     }
+
 };
 
-/*Start Menu"*/
-classShell.prototype.screenMainMenu = function() {
-    
-    var page0 = [
-        ' ',
-        '-------------------------'
-        "   MANLEY'S WEB TERMAL   ",
-        "          (v1.0)         ",
-        '0) OPTION 0',
-        '1) OPTION 1',
-        ' '
-        
-    ];
-    
-    OS.output.pushBuffer( page0 );
-    this.prompt();
-};
-        
-/*Option 6*/
-classShell.prototype.mopr = function() {
+
+classShell.prototype.wopr = function() {
     OS.output.pushBuffer(['AN INTERESTING GAME.']);
     window.setTimeout( (function() {
         OS.output.pushBuffer(['THE ONLY WINNING MOVE IS NOT TO PLAY.\n']);
@@ -114,7 +110,7 @@ classShell.prototype.mopr = function() {
     }).bind(this), 2000);
 };
 
-/*Option 7*/
+
 classShell.prototype.gtnw = function() {
     OS.output.pushBuffer([
         '********* SELECT INITIAL STRATEGY ********',' ',
@@ -143,32 +139,146 @@ classShell.prototype.gtnw = function() {
     this.prompt();
 };
 
-classShell.prototype.comHelp = function() {
-    
-    var page1 = [
+classShell.prototype.screenMainMenu = function() {
+
+    var page0 = [
         ' ',
-        " AVAILABLE COMMANDS:",
-        ' ',
-        ' HELP - show this screen ',
-        ' WELCOME - show welcome screen',
+        '-------------------------'
+        "   MANLEY'S WEB TERMAL   ",
+        "          (v1.0)         ",
+        '0) OPTION 0',
+        '1) OPTION 1',
         ' '
     ];
-    
-    OS.outputpushBuffer( page1 );
+
+    OS.output.pushBuffer( page0 );
     this.prompt();
-    
+
+};
+
+classShell.prototype.comResume = function() {
+    OS.output.pushBuffer([ '...Loading CV...' ]);
+    var l = Math.max(0,parseInt($(window).width()/2-300));
+    var t = Math.max(0,parseInt($(window).height()/2-400));
+    window.open('http://ryanroper.com/rmroper.pdf','_blank','width=600,height=800,left='+l+',top:'+t);
+    this.prompt();
+};
+
+classShell.prototype.comHelp = function() {
+
+    var page0 = [
+        ' ',
+        " Available commands:",
+        ' ',
+        ' HELP - show this screen',
+        ' WELCOME - show welcome screen',
+        ' ', /*
+        ' RUN [filename] - load and execute program (type "CATALOG" to list)',
+        ' LIST [filename] - show program source code',
+        ' LOAD [filename] - load program into memory',
+        ' CATALOG - list available files',
+        ' '*/
+    ];
+
+    OS.output.pushBuffer( page0 );
+    this.prompt();
+
+};
+
+classShell.prototype.comAbout = function() {
+
+    window.open("about.html","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.comNanda = function() {
+
+    window.open("nanda.html","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.comNodes = function() {
+
+    window.open("nodes.html","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.admin = function() {
+
+    OS.output.pushBuffer([
+        ' ',
+        'TURTLE ADMIN',
+        'RAVEN ADMIN',
+        ' '
+    ])
+
+    this.prompt();
+
+};
+
+classShell.prototype.comDiscord = function() {
+
+    window.open("https://discordapp.com","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.comTurtleAdmin = function() {
+
+    window.open("http://turtle.psrcrypto.com/admin.html","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.comRavenAdmin = function() {
+
+    window.open("http://pool.raven.psrcrypto.com:8000/admin","_self");
+
+    this.prompt();
+
 };
 
 classShell.prototype.comContact = function() {
-    OS.outputBuffer([
-        'D.O.D PENSION FILES INDICATE CURRENT MAILING AS: ',
+    OS.output.pushBuffer([
+        'D.O.D. PENSION FILES INDICATE CURRENT MAILING AS: ',
         ' ',
-        ' '
+        'ROPER, RYAN M',
+        'LENEXA, KANSAS',
+        'sysop' + '@' + 'ryanroper' + '.' + 'c' + 'om',
+        '(720) 257-9266'
     ]);
     this.prompt();
 };
 
-classShell.prototype.screenDisconnet = function() {
+classShell.prototype.comTurtle = function() {
+
+    window.open("http://turtle.psrcrypto.com","_self"); 
+    OS. output.pushBuffer([
+        ' '
+    ])
+    this.prompt();
+
+};
+
+classShell.prototype.comRaven = function() {
+    
+    window.open("http://pool.raven.psrcrypto.com:8000","_self"); 
+    OS. output.pushBuffer([
+        ' '
+    ])
+    this.prompt();
+
+};
+
+classShell.prototype.screenDisconnect = function() {
     OS.output.pushBuffer('CPE 1704 TKS ');
     for (var i=0;i<10;i++) {
         OS.output.pushBuffer(String.fromCharCode(Math.ceil(127*Math.random())));
@@ -182,7 +292,7 @@ classShell.prototype.comInterpreter = function( args ) {
         // 1. Parse arguments
         var filename = args[1].toLowerCase();
         var extension = filename.split(/\./).pop();
-        
+
         // 2. Load source code
         $.get('/code/'+filename, (function(extension,source) {
             // 3. Execute
@@ -201,18 +311,19 @@ classShell.prototype.comInterpreter = function( args ) {
             }
         }).bind(this,extension)
         ).fail( this.prompt.bind(this) );
-            
+
     } catch (e) {
         this.prompt();
     }
 };
+
 
 classShell.prototype.comView = function( args ) {
     try {
         // 1. Parse arguments
         var filename = args[1].toLowerCase();
         var extension = filename.split(/\./).pop();
-        
+
         // 2. Load source code
         $.get('/code/'+filename, (function(extension,source) {
             OS.output.pushBuffer("\n\n" + source + "\n\n");
