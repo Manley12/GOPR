@@ -143,11 +143,17 @@ classShell.prototype.screenMainMenu = function() {
 
     var page0 = [
         ' ',
-        '-------------------------'
-        "   MANLEY'S WEB TERMAL   ",
-        "          (v1.0)         ",
-        '0) OPTION 0',
-        '1) OPTION 1',
+        '---------------------------',
+        " PSR CRYPTO'S WEB TERMINAL ",
+        "          (v1.0)",
+        '---------------------------',
+        '0) DISCORD CHANNEL',
+        '1) ABOUT',
+        '2) TURTLE POOL',
+        '3) RAVEN POOL',
+        '4) NODES',
+        '5) NOTES AND ANNOUCEMENTS',
+        '6) GLOBAL THERMONUCLEAR WAR',
         ' '
     ];
 
@@ -334,5 +340,3 @@ classShell.prototype.comView = function( args ) {
         this.prompt();
     }
 };
-
-//to change is to progress
