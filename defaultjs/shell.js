@@ -78,7 +78,7 @@ classShell.prototype.comScreen = function( args ) {
             this.comAbout();
             break;
         case 2:
-            this.comTurtle();
+            this.comResume();
             break;
         case 3:
             this.comRaven();
@@ -167,7 +167,7 @@ classShell.prototype.comResume = function() {
     OS.output.pushBuffer([ '...Loading CV...' ]);
     var l = Math.max(0,parseInt($(window).width()/2-300));
     var t = Math.max(0,parseInt($(window).height()/2-400));
-    window.open('http://ryanroper.com/rmroper.pdf','_blank','width=600,height=800,left='+l+',top:'+t);
+    window.open("resume.html","_self");
     this.prompt();
 };
 
