@@ -45,7 +45,7 @@ var classShell = function() {
         {pattern: /^GLOBAL THERMONUCLEAR WAR/i, parser: 'gtnw' },
         {pattner: /^GLOBALTHERMONUCLEAR WAR/i, parser: 'gtnw' },
         {pattern: /^GLOBAL THERMONUCLEARWAR/i, parser: 'gtnw' },
-        {pattern: /^DISCONNECT/i, parser: 'screenDisconnect' )
+        {pattern: /^DISCONNECT/i, parser: 'screenDisconnect' }
     ];
 
 };
