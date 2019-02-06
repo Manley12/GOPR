@@ -144,8 +144,8 @@ classShell.prototype.screenMainMenu = function() {
     var page0 = [
         ' ',
         '---------------------------',
-        " PSR CRYPTO'S WEB TERMINAL ",
-        "          (v1.0)",
+        "   MANLEY'S WEB TERMINAL   ",
+        "           (v1.0)          ",
         '---------------------------',
         '0) DISCORD CHANNEL',
         '1) ABOUT',
