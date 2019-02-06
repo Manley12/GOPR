@@ -150,10 +150,10 @@ classShell.prototype.screenMainMenu = function() {
         '---------------------------',
         '0) DISCORD CHANNEL',
         '1) ABOUT',
-        '2) TURTLE POOL',
-        '3) RAVEN POOL',
-        '4) NODES',
-        '5) NOTES AND ANNOUCEMENTS',
+        '2) RESUME',
+        '3) ',
+        '4) ',
+        '5) ',
         '6) GLOBAL THERMONUCLEAR WAR',
         ' '
     ];
