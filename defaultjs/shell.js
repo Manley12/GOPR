@@ -148,12 +148,10 @@ classShell.prototype.screenMainMenu = function() {
         "   MANLEY'S WEB TERMINAL   ",
         "           (v1.0)          ",
         '---------------------------',
-        '0) DISCORD CHANNEL',
+        '0) HOME',
         '1) ABOUT',
         '2) RESUME',
-        '3) ',
-        '4) ',
-        '5) ',
+        '3) CONTACT ME',
         '6) GLOBAL THERMONUCLEAR WAR',
         ' '
     ];

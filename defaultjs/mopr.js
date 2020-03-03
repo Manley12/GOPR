@@ -14,6 +14,7 @@ $(document).ready(function() {
     OS.output.pushBuffer([
         'E0ATDT5I7N1D3E6X>',
         ' CONNECT',
+	' PLEASE USE A DESKTOP OR LAPTOP TO VIEW THIS SITE, IF YOU WISH TO VIEW A VERSION ON MOBILE GO TO MANLEY.GA/MOBILE/ ',
         '  '
     ]);
 
