@@ -196,7 +196,7 @@ classShell.prototype.admin = function() {
 
 classShell.prototype.comGregAdmin = function() {
 
-    window.open("http://turtle.psrcrypto.com/admin.html","_self");
+    window.open("https://app.netlify.com/teams/manley12/","_self");
 
     this.prompt();
 
