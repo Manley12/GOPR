@@ -72,7 +72,7 @@ classShell.prototype.comScreen = function( args ) {
     stdin = args[1];
     switch (parseInt(stdin)) {
         case 0:
-            this.comDiscord();
+            this.comHome();
             break;
         case 1:
             this.comAbout();
@@ -81,18 +81,9 @@ classShell.prototype.comScreen = function( args ) {
             this.comResume();
             break;
         case 3:
-            this.comRaven();
+            this.comContactMe();
             break;
         case 4:
-            this.comNodes();
-            break;
-        case 5:
-            this.comNanda();
-            break;
-        case 6:
-            this.wopr();
-            break;
-        case 7:
             this.gtnw();
             break;
         default:
@@ -152,7 +143,7 @@ classShell.prototype.screenMainMenu = function() {
         '1) ABOUT',
         '2) RESUME',
         '3) CONTACT ME',
-        '6) GLOBAL THERMONUCLEAR WAR',
+        '4) GLOBAL THERMONUCLEAR WAR',
         ' '
     ];
 
@@ -165,7 +156,7 @@ classShell.prototype.comResume = function() {
     OS.output.pushBuffer([ '...Loading CV...' ]);
     var l = Math.max(0,parseInt($(window).width()/2-300));
     var t = Math.max(0,parseInt($(window).height()/2-400));
-    window.open("resume.html","_self");
+    window.open("manley.ga/resume.pdf","_self");
     this.prompt();
 };
 
