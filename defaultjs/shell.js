@@ -187,6 +187,7 @@ classShell.prototype.admin = function() {
         'GREG ADMIN',
         'TESTING ADMIN',
         'JUST CURIOUS',
+        '......................................',
         ' '
     ])
 
