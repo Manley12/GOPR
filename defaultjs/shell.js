@@ -17,22 +17,8 @@ var classShell = function() {
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
         {pattern: /^ADMIN/i, parser: 'admin' },
-        {pattern: /^TURTLE ADMIN/i, parser: 'comTurtleAdmin' },
+        {pattern: /^GREG ADMIN/i, parser: 'comeGregAdmin' },
         {pattern: /^RAVEN ADMIN/i, parser: 'comRavenAdmin' },
-        {pattern: /^DISCORD/i, parser: 'comDiscord' },
-        {pattern: /^DISCORD CHANNEL/i, parser: 'comDiscord' },
-        {pattern: /^DISCORDCHANNEL/i, parser: 'comDiscord' },
-        {pattern: /^ABOUT/i, parser: 'comAbout' },
-        {pattern: /^TURTLE/i, parser: 'comTurtle'},
-        {pattern: /^RAVEN/i, parser: 'comRaven'},
-        {pattern: /^NODES/i, parser: 'comNodes' },
-        {pattern: /^NOTES/i, parser: 'comNanda' },
-        {pattern: /^NOTES AND/i, parser: 'comNanda' },
-        {pattern: /^NOTESAND/i, parser: 'comNanda' },
-        {pattern: /^NOTES AND ANNOUCEMENTS/i, parser: 'comNanda' },
-        {pattern: /^NOTESANDANNOUCEMENTS/i, parser: 'comNanda' },
-        {pattern: /^NOTES ANDANNOUCEMENTS/i, parser: 'comNanda' },
-        {pattern: /^NOTESAND ANNOUCEMENTS/i, parser: 'comNanda' },
         {pattern: /^GLOBAL/i, parser: 'gtnw' },
         {pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
         {pattern: /^WAR/i, parser: 'gtnw' },
@@ -81,7 +67,7 @@ classShell.prototype.comScreen = function( args ) {
             this.comResume();
             break;
         case 3:
-            this.comContactMe();
+            this.comContact();
             break;
         case 4:
             this.gtnw();
@@ -193,8 +179,14 @@ classShell.prototype.admin = function() {
 
     OS.output.pushBuffer([
         ' ',
-        'TURTLE ADMIN',
-        'RAVEN ADMIN',
+        '......................................',
+        'LOOK AT WHAT YOU FOUND',
+        '......................................',
+        'IF YOU ARE NOT ADMIN WHY ARE YOU HERE?',
+        '......................................',
+        'GREG ADMIN',
+        'TESTING ADMIN',
+        'JUST CURIOUS',
         ' '
     ])
 
@@ -202,7 +194,7 @@ classShell.prototype.admin = function() {
 
 };
 
-classShell.prototype.comTurtleAdmin = function() {
+classShell.prototype.comGregAdmin = function() {
 
     window.open("http://turtle.psrcrypto.com/admin.html","_self");
 
