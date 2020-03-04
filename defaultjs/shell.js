@@ -156,7 +156,7 @@ classShell.prototype.comResume = function() {
     OS.output.pushBuffer([ '...Loading CV...' ]);
     var l = Math.max(0,parseInt($(window).width()/2-300));
     var t = Math.max(0,parseInt($(window).height()/2-400));
-    window.open("manley.ga/resume.pdf","_self");
+    window.open("http://manley.ga/resume.pdf","_self");
     this.prompt();
 };
 
@@ -189,22 +189,6 @@ classShell.prototype.comAbout = function() {
 
 };
 
-classShell.prototype.comNanda = function() {
-
-    window.open("nanda.html","_self");
-
-    this.prompt();
-
-};
-
-classShell.prototype.comNodes = function() {
-
-    window.open("nodes.html","_self");
-
-    this.prompt();
-
-};
-
 classShell.prototype.admin = function() {
 
     OS.output.pushBuffer([
@@ -213,14 +197,6 @@ classShell.prototype.admin = function() {
         'RAVEN ADMIN',
         ' '
     ])
-
-    this.prompt();
-
-};
-
-classShell.prototype.comDiscord = function() {
-
-    window.open("https://discordapp.com","_self");
 
     this.prompt();
 
@@ -246,32 +222,12 @@ classShell.prototype.comContact = function() {
     OS.output.pushBuffer([
         'D.O.D. PENSION FILES INDICATE CURRENT MAILING AS: ',
         ' ',
-        'ROPER, RYAN M',
-        'LENEXA, KANSAS',
-        'sysop' + '@' + 'ryanroper' + '.' + 'c' + 'om',
-        '(720) 257-9266'
+        'MANLEY, GREGORY F',
+        'GOLDERN, COLORADO',
+        'greg' + '@' + 'manley' + '.' + 'g' + 'a',
+        '(470) 767-2747'
     ]);
     this.prompt();
-};
-
-classShell.prototype.comTurtle = function() {
-
-    window.open("http://turtle.psrcrypto.com","_self"); 
-    OS. output.pushBuffer([
-        ' '
-    ])
-    this.prompt();
-
-};
-
-classShell.prototype.comRaven = function() {
-    
-    window.open("http://pool.raven.psrcrypto.com:8000","_self"); 
-    OS. output.pushBuffer([
-        ' '
-    ])
-    this.prompt();
-
 };
 
 classShell.prototype.screenDisconnect = function() {
