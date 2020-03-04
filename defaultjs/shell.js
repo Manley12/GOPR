@@ -17,7 +17,7 @@ var classShell = function() {
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
         {pattern: /^ADMIN/i, parser: 'admin' },
-        {pattern: /^GREG ADMIN/i, parser: 'comeGregAdmin' },
+        {pattern: /^GREG ADMIN/i, parser: 'comGregAdmin' },
         {pattern: /^RAVEN ADMIN/i, parser: 'comRavenAdmin' },
         {pattern: /^GLOBAL/i, parser: 'gtnw' },
         {pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
