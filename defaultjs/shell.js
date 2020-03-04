@@ -70,7 +70,7 @@ classShell.prototype.comScreen = function( args ) {
             this.comContact();
             break;
         case 4:
-            this.gtnw();
+            this.wopr();
             break;
         default:
             OS.output.pushBuffer("FUNCTION NOT IMPLEMENTED\n");
