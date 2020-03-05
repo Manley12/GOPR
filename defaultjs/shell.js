@@ -21,7 +21,7 @@ var classShell = function() {
         {pattern: /^ADMIN/i, parser: 'admin' },
         {pattern: /^GREG ADMIN/i, parser: 'comGregAdmin' },
         {pattern: /^RAVEN ADMIN/i, parser: 'comRavenAdmin' },
-        {pattern: /^TIC-TAC-TOE/i, parser: 'comTicTac' },
+        {pattern: /^TICTACTOE/i, parser: 'comTicTac' },
         {pattern: /^GLOBAL/i, parser: 'gtnw' },
         {pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
         {pattern: /^WAR/i, parser: 'gtnw' },
