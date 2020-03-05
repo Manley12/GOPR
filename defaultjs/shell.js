@@ -72,6 +72,15 @@ classShell.prototype.comScreen = function( args ) {
         case 4:
             this.wopr();
             break;
+        case 5:
+            this.gtnw();
+            break;
+        case 6:
+            this.gtnw();
+            break;
+        case 7:
+            this.gtnw();
+            break;
         default:
             OS.output.pushBuffer("FUNCTION NOT IMPLEMENTED\n");
             this.screenMainMenu();
