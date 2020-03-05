@@ -212,6 +212,30 @@ classShell.prototype.screenMainMenu = function() {
 
 };*/
 
+classShell.prototype.comGames = function() {
+
+    var page0 = [
+        ' ',
+        'SHALL WE PLAY A GAME? ',
+        ' ',
+        ' ',
+        'CHESS ',
+        'POKER ',
+        'FIGHTER COMBAT ',
+        'GUERILLA ENGAGEMENT ',
+        'DESERT WARFARE ',
+        'AIR-TO-GROUND ACTIONS ',
+        'THEATERWIDE TACTICAL WARFARE ',
+        'THEATERWIDE BIOTOXIC AND CHEMICAL WARFARE ',
+        'GLOBAL THERMONUCLEAR WAR ',
+        ' '
+    ];
+
+    OS.output.pushBuffer( page0 );
+    this.prompt();
+
+};
+
 classShell.prototype.comResume = function() {
     OS.output.pushBuffer([ '...Loading CV...' ]);
     var l = Math.max(0,parseInt($(window).width()/2-300));
