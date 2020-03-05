@@ -110,7 +110,7 @@ classShell.prototype.comScreen = function( args ) {
             this.wopr();
             break;
         case 5:
-            this.gtnw();
+            this.wopr();
             break;
         case 6:
             this.gtnw();
@@ -178,7 +178,8 @@ classShell.prototype.screenMainMenu = function() {
         '1) ABOUT',
         '2) RESUME',
         '3) CONTACT ME',
-        '4) GLOBAL THERMONUCLEAR WAR',
+        '4) GAMES',
+        '5) GLOBAL THERMONUCLEAR WAR',
         ' '
     ];
 
