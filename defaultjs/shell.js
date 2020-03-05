@@ -13,7 +13,8 @@ var classShell = function() {
 
     this.parsePatterns = [
         { pattern: /^\s*$/, parser: 'prompt' },
-        { pattern: /^([0-141])$/, parser: 'comScreen' },
+        { pattern: /^([0-9])$/, parser: 'comScreen' },
+        { pattern: /^101$/, parser: 'admin' },
         /*{ pattern: /^([100-141])$/, parser: 'comScreenThermo' },*/
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
