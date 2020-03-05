@@ -107,7 +107,7 @@ classShell.prototype.comScreen = function( args ) {
             this.comContact();
             break;
         case 4:
-            this.wopr();
+            this.comGames();
             break;
         case 5:
             this.wopr();
@@ -180,6 +180,30 @@ classShell.prototype.screenMainMenu = function() {
         '3) CONTACT ME',
         '4) GAMES',
         '5) GLOBAL THERMONUCLEAR WAR',
+        ' '
+    ];
+
+    OS.output.pushBuffer( page0 );
+    this.prompt();
+
+};
+
+classShell.prototype.comGames = function() {
+
+    var page0 = [
+        ' ',
+        'SHALL WE PLAY A GAME? ',
+        ' ',
+        ' ',
+        'CHESS ',
+        'POKER ',
+        'FIGHTER COMBAT ',
+        'GUERILLA ENGAGEMENT ',
+        'DESERT WARFARE ',
+        'AIR-TO-GROUND ACTIONS ',
+        'THEATERWIDE TACTICAL WARFARE ',
+        'THEATERWIDE BIOTOXIC AND CHEMICAL WARFARE ',
+        'GLOBAL THERMONUCLEAR WAR '
         ' '
     ];
 
