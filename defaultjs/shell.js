@@ -57,8 +57,8 @@ classShell.prototype.comScreenThermo = function( args ) {
 
     stdin = args[1];
     switch (parseInt(stdin)) {
-        case 0:
-            this.comHome();
+        case 101:
+            this.comContact();
             break;
         case 1:
             this.comAbout();
