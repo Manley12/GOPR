@@ -41,15 +41,7 @@ var classShell = function() {
 
 classShell.prototype.processMainMenu = function( stdin ) {
 
-    for (var i=0;i<this.parsePatterns.length;i++) {
-        var matches = stdin.match(this.parsePatterns[i].pattern);
-        if (matches) {
-            this[this.parsePatterns[i].parser].call(this,matches);
-            return;
-        }
-    }
-
-    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
+    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, TIC, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
     this.prompt();
     return;
 
