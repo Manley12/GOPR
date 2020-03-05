@@ -55,14 +55,6 @@ classShell.prototype.processMainMenu = function( stdin ) {
 
 };
 
-classShell.prototype.comTicTac = function( stdin ) {
-
-    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, TIC, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
-    this.prompt();
-    return;
-
-};
-
 /*classShell.prototype.comScreenThermo = function( args ) {
 
     stdin = args[1];
@@ -146,6 +138,13 @@ classShell.prototype.wopr = function() {
     }).bind(this), 2000);
 };
 
+classShell.prototype.comTicTac = function() {
+    OS.output.pushBuffer(['AN INTERESTING GAME. Tic tac']);
+    window.setTimeout( (function() {
+        OS.output.pushBuffer(['THE ONLY WINNING MOVE IS NOT TO PLAY.\n']);
+        this.prompt();
+    }).bind(this), 2000);
+};
 
 classShell.prototype.gtnw = function() {
     OS.output.pushBuffer([
