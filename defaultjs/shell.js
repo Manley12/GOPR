@@ -14,6 +14,7 @@ var classShell = function() {
     this.parsePatterns = [
         { pattern: /^\s*$/, parser: 'prompt' },
         { pattern: /^([0-9])$/, parser: 'comScreen' },
+        { pattern: /^([100-141])$/, parser: 'comScreenThermo' },
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
         {pattern: /^ADMIN/i, parser: 'admin' },
@@ -49,6 +50,41 @@ classShell.prototype.processMainMenu = function( stdin ) {
     OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
     this.prompt();
     return;
+
+};
+
+classShell.prototype.comScreenThermo = function( args ) {
+
+    stdin = args[1];
+    switch (parseInt(stdin)) {
+        case 0:
+            this.comHome();
+            break;
+        case 1:
+            this.comAbout();
+            break;
+        case 2:
+            this.comResume();
+            break;
+        case 3:
+            this.comContact();
+            break;
+        case 4:
+            this.wopr();
+            break;
+        case 5:
+            this.gtnw();
+            break;
+        case 6:
+            this.gtnw();
+            break;
+        case 7:
+            this.gtnw();
+            break;
+        default:
+            OS.output.pushBuffer("FUNCTION NOT IMPLEMENTED\n");
+            this.screenMainMenu();
+    }
 
 };
 
