@@ -188,7 +188,7 @@ classShell.prototype.screenMainMenu = function() {
 
 };
 
-classShell.prototype.comGames = function() {
+/*classShell.prototype.comGames = function() {
 
     var page0 = [
         ' ',
@@ -210,7 +210,7 @@ classShell.prototype.comGames = function() {
     OS.output.pushBuffer( page0 );
     this.prompt();
 
-};
+};*/
 
 classShell.prototype.comResume = function() {
     OS.output.pushBuffer([ '...Loading CV...' ]);
