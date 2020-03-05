@@ -230,7 +230,7 @@ classShell.prototype.comGames = function() {
         'GLOBAL THERMONUCLEAR WAR ',
         ' ',
         ' ',
-        ' HOW ABOUT A NICE GAME OF TIC-TAC-TOE? ',
+        'HOW ABOUT A NICE GAME OF TIC-TAC-TOE? ',
         ' '
     ];
 
