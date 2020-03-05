@@ -21,6 +21,7 @@ var classShell = function() {
         {pattern: /^ADMIN/i, parser: 'admin' },
         {pattern: /^GREG ADMIN/i, parser: 'comGregAdmin' },
         {pattern: /^RAVEN ADMIN/i, parser: 'comRavenAdmin' },
+        {pattern: /^TIC-TAC-TOE/i, parser: 'comTicTac' },
         {pattern: /^GLOBAL/i, parser: 'gtnw' },
         {pattern: /^THERMONUCLEAR/i, parser: 'gtnw' },
         {pattern: /^WAR/i, parser: 'gtnw' },
@@ -39,6 +40,22 @@ var classShell = function() {
 };
 
 classShell.prototype.processMainMenu = function( stdin ) {
+
+    for (var i=0;i<this.parsePatterns.length;i++) {
+        var matches = stdin.match(this.parsePatterns[i].pattern);
+        if (matches) {
+            this[this.parsePatterns[i].parser].call(this,matches);
+            return;
+        }
+    }
+
+    OS.output.pushBuffer("YOU MUST ENTER A VALID COMMAND, OR A NUMBER (0-6). PLEASE TRY AGAIN.\n");
+    this.prompt();
+    return;
+
+};
+
+classShell.prototype.comTicTac = function( stdin ) {
 
     for (var i=0;i<this.parsePatterns.length;i++) {
         var matches = stdin.match(this.parsePatterns[i].pattern);
