@@ -136,7 +136,7 @@ classShell.prototype.wopr = function() {
 
 classShell.prototype.gtnw = function() {
     OS.output.pushBuffer([
-        '********* SELECT INITIAL STRATEGY ********',' ',
+        '**************** SELECT INITIAL STRATEGY ***************',' ',
         '101. US first strike          121. Nicaraguan thrust ',
         '102. USSR first strike        122. Greenland domestic ',
         '103. NATO / Warsaw Pact       123. Iceland heavy ',
@@ -146,17 +146,17 @@ classShell.prototype.gtnw = function() {
         '107. USSR - China attack      127. Thai subversion ',
         '108. India Pakistan war       128. Romanian strike ',
         '109. Mediterranean war        129. Pakistan sovereignty ',
-        '110. Hongkong variant        130. Afghan misdirection',
-        '111. SEATO decapitating      131. Thai variation ',
-        '112. Cuban provocation       132. Northern territorial ',
-        '113. Inadvertent             133. Polish paramilitary ',
-        '114. Atlantic heavy          134. S.African offensive ',
-        '115. Cuban paramilitary      135. Panama misdirection',
-        '116. Nicaraguan preemptive   136. Scandinavian domestic ',
-        '117. Pacific territorial     137. Jordan preemptive ',
-        '118. Burmese theatrewide     138. English thrust ',
-        '119. Turkish decoy           139. Burmese maneuver ',
-        '120. NATO recursion          140. Spain counter',
+        '110. Hongkong variant         130. Afghan misdirection',
+        '111. SEATO decapitating       131. Thai variation ',
+        '112. Cuban provocation        132. Northern territorial ',
+        '113. Inadvertent              133. Polish paramilitary ',
+        '114. Atlantic heavy           134. S.African offensive ',
+        '115. Cuban paramilitary       135. Panama misdirection ',
+        '116. Nicaraguan preemptive    136. Scandinavian domestic ',
+        '117. Pacific territorial      137. Jordan preemptive ',
+        '118. Burmese theatrewide      138. English thrust ',
+        '119. Turkish decoy            139. Burmese maneuver ',
+        '120. NATO recursion           140. Spain counter',
         ' '
     ]);
     this.prompt();
