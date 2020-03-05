@@ -13,8 +13,8 @@ var classShell = function() {
 
     this.parsePatterns = [
         { pattern: /^\s*$/, parser: 'prompt' },
-        { pattern: /^([0-9])$/, parser: 'comScreen' },
-        { pattern: /^([100-141])$/, parser: 'comScreenThermo' },
+        { pattern: /^([0-141])$/, parser: 'comScreen' },
+        /*{ pattern: /^([100-141])$/, parser: 'comScreenThermo' },*/
         { pattern: /^HELP/i, parser: 'comHelp' },
         { pattern: /^WELCOME/i, parser: 'screenMainMenu' },
         {pattern: /^ADMIN/i, parser: 'admin' },
@@ -53,7 +53,7 @@ classShell.prototype.processMainMenu = function( stdin ) {
 
 };
 
-classShell.prototype.comScreenThermo = function( args ) {
+/*classShell.prototype.comScreenThermo = function( args ) {
 
     stdin = args[1];
     switch (parseInt(stdin)) {
@@ -86,7 +86,7 @@ classShell.prototype.comScreenThermo = function( args ) {
             this.screenMainMenu();
     }
 
-};
+};*/
 
 
 classShell.prototype.comScreen = function( args ) {
@@ -116,6 +116,9 @@ classShell.prototype.comScreen = function( args ) {
             break;
         case 7:
             this.gtnw();
+            break;
+        case 101:
+            this.comContact();
             break;
         default:
             OS.output.pushBuffer("FUNCTION NOT IMPLEMENTED\n");
