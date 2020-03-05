@@ -228,6 +228,9 @@ classShell.prototype.comGames = function() {
         'THEATERWIDE TACTICAL WARFARE ',
         'THEATERWIDE BIOTOXIC AND CHEMICAL WARFARE ',
         'GLOBAL THERMONUCLEAR WAR ',
+        ' ',
+        ' ',
+        ' HOW ABOUT A NICE GAME OF TIC-TAC-TOE? ',
         ' '
     ];
 
