@@ -83,7 +83,8 @@ var classShell = function() {
         {pattern: /^GLOBAL THERMONUCLEAR WAR/i, parser: 'gtnw' },
         {pattner: /^GLOBALTHERMONUCLEAR WAR/i, parser: 'gtnw' },
         {pattern: /^GLOBAL THERMONUCLEARWAR/i, parser: 'gtnw' },
-        {pattern: /^DISCONNECT/i, parser: 'screenDisconnect' }
+        {pattern: /^DISCONNECT/i, parser: 'screenDisconnect' },
+        {pattern: /^YES/i, parser: 'comTicTac' }
     ];
 
 };
@@ -188,9 +189,8 @@ classShell.prototype.wopr = function() {
 };
 
 classShell.prototype.comTicTac = function() {
-    OS.output.pushBuffer(['AN INTERESTING GAME. Tic tac']);
     window.setTimeout( (function() {
-        OS.output.pushBuffer(['THE ONLY WINNING MOVE IS NOT TO PLAY.\n']);
+        OS.output.pushBuffer(['1 Player or 2 Player\n']);
         this.prompt();
     }).bind(this), 2000);
 };
