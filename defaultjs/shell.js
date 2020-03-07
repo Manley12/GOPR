@@ -53,7 +53,7 @@ var classShell = function() {
         { pattern: /^137$/, parser: 'wopr' },
         { pattern: /^138$/, parser: 'wopr' },
         { pattern: /^139$/, parser: 'wopr' },
-        { pattern: /^140$/, parser: 'gtnw' },
+        { pattern: /^140$/, parser: 'wopr' },
         { pattern: /^141$/, parser: 'wopr' },
         { pattern: /^142$/, parser: 'wopr' },
         { pattern: /^143$/, parser: 'wopr' },
