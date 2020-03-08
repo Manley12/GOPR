@@ -109,8 +109,8 @@ classShell.prototype.processMainMenu = function( stdin ) {
 
     stdin = args[1];
     switch (parseInt(stdin)) {
-        case 101:
-            this.comContact();
+        case 0:
+            this.comHome();
             break;
         case 1:
             this.comAbout();
@@ -328,6 +328,14 @@ classShell.prototype.comHelp = function() {
 classShell.prototype.comAbout = function() {
 
     window.open("about.html","_self");
+
+    this.prompt();
+
+};
+
+classShell.prototype.comHome = function() {
+
+    window.open("index.html","_self");
 
     this.prompt();
 
